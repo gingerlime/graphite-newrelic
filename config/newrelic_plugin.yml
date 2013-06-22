@@ -1,0 +1,37 @@
+# Please make sure to update the license_key information with the license key for your New Relic
+# account.
+#
+#
+newrelic:
+  #
+  # Update with your New Relic account license key:
+  #
+  license_key: 'YOUR_LICENSE_KEY_HERE'
+  #
+  # Set to '1' for verbose output, remove for normal output.
+  # All output goes to stdout/stderr.
+  #
+  # verbose: 1
+#
+# Agent Configuration:
+#
+agents:
+  # this is where configuration for agents belongs
+  graphite:
+    settings:
+      server:
+        url: 'http://your.graphite.server'
+        # username and password if necessary for basic authentication
+        username: graphite
+        password: password
+      targets:
+        -
+          target: 'summarize(stats.counters.server.signup.*.count,"1d","sum",true)'
+          prefix: 'website'
+          from: '-180min'
+          units: 'signups'
+        - 
+          target: 'another.graphite.target'
+          from: '-180min'
+          prefix: 'growth'
+          units: '%'
