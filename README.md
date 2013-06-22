@@ -7,9 +7,8 @@ Get your graphite data displayed in New Relic.
 ## Why?
 
 Because it's there.
-New Relic has a very nice charting capabilities.
-Unfortunately it's not that easy to work with custom/business-data as Graphite/Statsd.
-The new Plugin options for New Relic make it somehow possible to try to mix those two together.
+New Relic has a very nice charting capabilities. (Which is hard to admit, after creating
+[Giraffe](http://giraffe.kenhub.com/)). Unfortunately it's not that easy to work with custom/business-data as Graphite/Statsd. The new Plugin options for New Relic make it somehow possible to try to mix those two together.
 
 ## Usage
 
