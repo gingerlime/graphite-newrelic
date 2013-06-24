@@ -1,6 +1,7 @@
 # graphite-newrelic
 
-A Graphite plugin for New Relic (beta / proof-of-concept)
+A [Graphite](https://github.com/graphite-project/graphite-web) plugin for the [New Relic
+Platform](http://newrelic.com/platform) (beta / proof-of-concept)
 
 Get your graphite data displayed in New Relic.
 
