@@ -17,7 +17,7 @@ module GraphiteAgent
 
   class Agent < NewRelic::Plugin::Agent::Base
 
-    agent_guid "com.gingerlime.graphite.graphite"
+    agent_guid "_TYPE_YOUR_GUID_HERE_" # e.g. "com.gingerlime.graphite.graphite"
     agent_version "1.0.1"
     agent_config_options :settings
     agent_human_labels("Graphite Agent") { "Graphite" }

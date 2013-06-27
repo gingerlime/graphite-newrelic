@@ -37,8 +37,6 @@ Each `target` can report different `units` (e.g. `req/s`, `registration`, `click
 
 It's recommended to use the graphite `alias`, `aliasByNode` etc - to make the targets look nicer on New Relic.
 
-I couldn't find a way to *delete* the plugin from New Relic once it starts reporting data.
-
 ## Contributions
 
 I'd be happy to get some ideas or pull requests and think of ways to improve this. 
