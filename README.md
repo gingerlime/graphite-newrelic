@@ -13,7 +13,8 @@ New Relic has a very nice charting capabilities. (Which is hard to admit, after 
 
 ## Usage
 
-* Edit `config/newrelic_plugin.yml` and replace "YOUR_LICENSE_KEY_HERE" with your New Relic license key
+* Edit `config/newrelic_plugin.yml` and replace `"YOUR_LICENSE_KEY_HERE"` with your New Relic license key
+* Edit `graphite_agent.rb` and replace `"_TYPE_YOUR_GUID_HERE_"` with a GUID (e.g. `com.your-name.plugin.name`)
 * Update your settings to match your graphite server, authentication (optional)
 * Update the targets to match your graphite targets
 * run `bundle install` and then `bundle exec ./graphite_agent.rb`
@@ -22,6 +23,10 @@ New Relic has a very nice charting capabilities. (Which is hard to admit, after 
 ## Notes / Settings
 
 This is still in the proof-of-concept phase. Just a weekend project at this stage. It seems to work though.
+
+Considering the New Relic plugin architecture, this is more of a Graphite to Newrelic SDK than a plugin. It should at
+least give you a skeleton for fetching data from Graphite and feeding it into New Relic, where you can build some
+dashboards to display it.
 
 Only the **last datapoint** is currently used from graphite. If you are trying to collect counters, this might mean you won't get the data you expect. Use graphite's `summary` or other aggregation functions, and make sure the last datapoint is correct. I might extent it in future to pick between last/first/average/min/max etc.
 
